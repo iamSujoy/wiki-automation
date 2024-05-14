@@ -1,6 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="wikipedia testing" verbose="1">
     <test name="verify capital of country">
+        <parameter name="browserName" value="chrome"></parameter>
         <classes>
             <class name="com.testing.tests.SearchByConutryTest"/>
         </classes>

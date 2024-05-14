@@ -4,10 +4,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Parameters;
 
 public class BaseTest {
     public static WebDriver driver;
 
+    @Parameters({"browserName"})
     public static WebDriver configureBrowserDriver(String browserName){
 
         if(browserName.equalsIgnoreCase("chrome")) {

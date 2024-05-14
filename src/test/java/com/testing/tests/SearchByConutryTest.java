@@ -5,19 +5,16 @@ import com.testing.pages.SearchResultPage;
 import com.testing.pages.WikipediaPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class SearchByConutryTest {
 
     private WebDriver driver;
     private final String pageURL = "https://en.wikipedia.org/wiki/Main_Page";
-    private final String browserName = "Chrome";
 
+    @Parameters({"browserName"})
     @BeforeMethod
-    public void setUp(){
+    public void setUp(String browserName){
         driver = BaseTest.configureBrowserDriver(browserName);
         driver.get(pageURL);
         driver.manage().window().maximize();
