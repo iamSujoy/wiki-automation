@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="wikipedia testing" verbose="1">
+    <test name="verify capital of country">
+        <classes>
+            <class name="com.testing.tests.SearchByConutryTest"/>
+        </classes>
+    </test>
+</suite>
